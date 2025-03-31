@@ -1,0 +1,15 @@
+services:
+  webserver:
+    image: apache/airflow:2.6.3
+    restart: always
+    volumes:
+      - ./dags:/opt/airflow/dags  # This is where your DAGs live
+      - ./data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'False'
+    command: airflow standalone

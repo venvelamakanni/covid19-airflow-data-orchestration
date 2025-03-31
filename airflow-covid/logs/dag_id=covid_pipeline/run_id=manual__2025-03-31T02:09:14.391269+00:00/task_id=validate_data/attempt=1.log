@@ -1,0 +1,16 @@
+[2025-03-31T02:09:29.104+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid_pipeline.validate_data manual__2025-03-31T02:09:14.391269+00:00 [queued]>
+[2025-03-31T02:09:29.107+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid_pipeline.validate_data manual__2025-03-31T02:09:14.391269+00:00 [queued]>
+[2025-03-31T02:09:29.107+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2025-03-31T02:09:29.114+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): validate_data> on 2025-03-31 02:09:14.391269+00:00
+[2025-03-31T02:09:29.117+0000] {standard_task_runner.py:57} INFO - Started process 2824 to run task
+[2025-03-31T02:09:29.119+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'covid_pipeline', 'validate_data', 'manual__2025-03-31T02:09:14.391269+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/covid_pipeline.py', '--cfg-path', '/tmp/tmppf8b_3pi']
+[2025-03-31T02:09:29.120+0000] {standard_task_runner.py:85} INFO - Job 27: Subtask validate_data
+[2025-03-31T02:09:29.137+0000] {task_command.py:410} INFO - Running <TaskInstance: covid_pipeline.validate_data manual__2025-03-31T02:09:14.391269+00:00 [running]> on host 246b607dca19
+[2025-03-31T02:09:29.235+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='covid_pipeline' AIRFLOW_CTX_TASK_ID='validate_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-31T02:09:14.391269+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-31T02:09:14.391269+00:00'
+[2025-03-31T02:09:30.037+0000] {warnings.py:110} WARNING - /home/airflow/.local/lib/python3.7/site-packages/snowflake/connector/options.py:109: UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+  "pyarrow", installed_pyarrow_version, pandas_pyarrow_extra
+
+[2025-03-31T02:09:31.193+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-03-31T02:09:31.201+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=covid_pipeline, task_id=validate_data, execution_date=20250331T020914, start_date=20250331T020929, end_date=20250331T020931
+[2025-03-31T02:09:31.279+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-03-31T02:09:31.325+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check
